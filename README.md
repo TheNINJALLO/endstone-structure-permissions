@@ -20,8 +20,9 @@
 </p>
 
 <p align="center">
-  <a href="#overview">Overview</a> &bull;
-  <a href="#compatibility">Compatibility</a> &bull;
+  <a href="#what-it-does">What it does</a> &bull;
+  <a href="#how-to-use">How to use</a> &bull;
+  <a href="#commands-and-permissions">Commands</a> &bull;
   <a href="#install">Install</a> &bull;
   <a href="https://github.com/TheNINJALLO/endstone-structure-permissions/releases">Releases</a>
 </p>
@@ -30,11 +31,23 @@
 
 Allow non-operator players with specific permissions to use structure blocks. This release is aligned with Endstone 0.11.8 and Minecraft Bedrock Dedicated Server 1.26.40, and is distributed as a Python wheel for direct installation in an Endstone server.
 
-## Capabilities
+## What it does
 
-- Structure-block access without granting operator status
-- Fine-grained Endstone permission checks
-- Focused event enforcement with minimal server overhead
+- Allows selected non-operators to use structure blocks without granting full operator status.
+- Maintains an explicit delegated-player list through an operator-only command.
+- Enforces structure-block access through focused event checks.
+
+## How to use
+
+1. Run `/sp grant <player>` as an operator for each trusted structure editor.
+2. Have the non-operator interact with a structure block to confirm the delegated access.
+3. Review the current list with `/sp list` and revoke access with `/sp revoke <player>` when work is complete.
+
+## Commands and permissions
+
+| Command / usage | What it does | Access |
+|---|---|---|
+| `/sp grant <player: str>`<br>`/sp revoke <player: str>`<br>`/sp list` | Structure Permissions management | `structureperm.admin` |
 
 ## Compatibility
 
