@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "endstone-structure-permissions"
+version = "1.0.1"
+description = "Allow non-operator players with specific permissions to use structure blocks"
+requires-python = ">=3.10"
+dependencies = [
+    "endstone>=0.11.8,<0.12"
+]
+
+[project.entry-points."endstone"]
+structure-permissions = "endstone_structure_permissions:StructurePermissionsPlugin"
+
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = ["endstone_structure_permissions"]
