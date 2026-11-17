@@ -4,11 +4,11 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "endstone-structure-permissions"
-version = "1.0.2"
+version = "1.0.3"
 description = "Allow non-operator players with specific permissions to use structure blocks"
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 dependencies = [
-    "endstone>=0.11.9,<0.12"
+    "endstone>=0.11.16,<0.12"
 ]
 
 [project.entry-points."endstone"]
